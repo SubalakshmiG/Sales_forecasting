@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<section class="image-block" style="background-image: url('https://www.xpand-it.com/wp-content/uploads/2021/08/forecast_blog-1.png'); background-repeat: no-repeat; background-size: 100% 90%; ">
+  <section class ="dashboard-block">
+    <div class="container">
+      <div class="row ">
+        <div class="col login-sec">
+          <form class="form" style="align-content: center; height: 50%; width: 40%;" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+            <div class="form-group">
+              <label style=" margin-bottom:30px; margin-left: 55px; font-weight:700; font-size:30px; color:back;" for="csvFile"> UPLOAD CSV FILE</label>
+              <input type="file" accept=".csv" class="form-control-file" id="csvFile"   (change)="onFileSelected($event)" #csvFileInput>
+            </div>
+            <label style="font-weight: 700; font-size: larger; padding-left: 10px; padding-top: 15px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;" for="periodicity">Periodicity</label>
+            <select name="periodicity" style="margin-left: 10px;" id="periodicity" (change)="onPeriodicityChange($event)">
+              <option></option>
+              <option value="d">Days</option>
+              <option value="w">Weeks</option>
+              <option value="m">Months</option>
+              <option value="y">Years</option>
+            </select>
+
+            <label style="font-weight: 700; font-size: larger; padding-left: 10px; padding-top: 10px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;" for="periods">Periods</label>
+            <input type="number" style="width: 60px; text-align: center; margin-left: 10px;" name="periods" id="periods" (change)="onPeriodsChange($event)"><br>
+
+            <input type="submit" class="btn btn-predict float-right"  value="Predict" style="background: #9781e9eb; margin-right: 5%; color:black; font-weight:600; width: 100px; padding: 5px; margin-top: 8px; margin-left: 35px;">
+            <div *ngIf="showTimer" style="margin-top: 10px; font-weight: 700; font-size: larger;">
+              {{ timer }} seconds 
+            </div>
+          </form>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</section>

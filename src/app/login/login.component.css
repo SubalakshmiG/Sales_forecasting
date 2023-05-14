@@ -1,0 +1,17 @@
+.login-block{
+    float:left;
+    width:100%;
+    padding-top: 270px;
+    padding-top: auto;
+  }
+  
+  .container{background-color: rgba(255, 255, 255, 0.779); border-radius: 20px; width: 30%; height: 40%;position: relative; margin-top: -200px; margin-right: 500px;}
+  .login-sec{padding: 50px 30px; position:relative;}
+  .login-sec h2{margin-bottom:30px; font-weight:700; font-size:30px; color:back;}
+  .login-sec h2:after{content:" "; width:100px; height:5px; background:#ffffff; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+  .btn-login{background: #9781e9eb; margin-right: 35%; color:black; font-weight:600; width: 100px; padding: 5px; margin-top: 8px;}
+  .form-group{
+    margin-top: 25px;
+  
+    margin-bottom: -10px;
+  }
